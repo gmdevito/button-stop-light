@@ -2,6 +2,8 @@ let lightState = 0
 input.onPinPressed(TouchPin.P0, function () {
     if (lightState <= 1) {
         lightState += 1
+    } else {
+        lightState = 0
     }
 })
 function clearPins () {

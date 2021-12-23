@@ -4,7 +4,13 @@ input.onPinPressed(TouchPin.P0, function () {
         lightState += 1
     }
 })
+function clearPins () {
+    pins.digitalWritePin(DigitalPin.P0, 0)
+    pins.digitalWritePin(DigitalPin.P1, 0)
+    pins.digitalWritePin(DigitalPin.P2, 0)
+}
 basic.forever(function () {
+    clearPins()
     if (lightState == 1) {
         pins.digitalWritePin(DigitalPin.P1, 1)
     } else if (lightState == 2) {

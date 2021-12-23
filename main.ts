@@ -1,9 +1,8 @@
-let lightState = 0
 input.onPinPressed(TouchPin.P0, function () {
     if (lightState <= 2) {
         lightState += 1
     } else {
-        lightState = 0
+        lightState = 1
     }
 })
 function clearPins () {
@@ -11,6 +10,8 @@ function clearPins () {
     pins.digitalWritePin(DigitalPin.P2, 0)
     pins.digitalWritePin(DigitalPin.P8, 0)
 }
+let lightState = 0
+lightState = 1
 basic.forever(function () {
     clearPins()
     if (lightState == 2) {

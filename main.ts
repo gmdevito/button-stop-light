@@ -19,6 +19,6 @@ basic.forever(function () {
     } else if (lightState == 3) {
         pins.digitalWritePin(DigitalPin.P8, 1)
     } else {
-        pins.digitalWritePin(DigitalPin.P1, 0)
+        pins.digitalWritePin(DigitalPin.P1, 1)
     }
 })

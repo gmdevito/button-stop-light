@@ -6,10 +6,10 @@ input.onPinPressed(TouchPin.P0, function () {
 })
 basic.forever(function () {
     if (lightState == 1) {
-        pins.digitalWritePin(DigitalPin.P1, lightState)
+        pins.digitalWritePin(DigitalPin.P1, 1)
     } else if (lightState == 2) {
-        pins.digitalWritePin(DigitalPin.P2, lightState)
+        pins.digitalWritePin(DigitalPin.P2, 2)
     } else {
-        pins.digitalWritePin(DigitalPin.P0, lightState)
+        pins.digitalWritePin(DigitalPin.P0, 0)
     }
 })
